@@ -12,5 +12,7 @@ Screens:
 2. Forecast
    Check out the Horizontal Scrollview where you can view the weather forecast for the next 5 days. Perfect for planning ahead! ☀️🌧️
 
-API:
+API source:
 https://www.weatherapi.com/
+
+Add the API key I sent via email into utils/weatherAPI.ts -> API_KEY
