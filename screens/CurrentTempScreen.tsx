@@ -18,7 +18,7 @@ export default function CurrentTempScreen({ navigation }: Props) {
   useEffect(() => {
     const loadWeather = async () => {
       try {
-        const { weatherData } = await fetchWeather(false);
+        const { weatherData } = await fetchWeather();
         setWeather(weatherData);
       } catch (err) {
         console.log("Caught error");

@@ -1,6 +1,6 @@
 import * as Location from "expo-location";
 
-export const fetchWeather = async (isHistorical: boolean) => {
+export const fetchWeather = async (fetchForecast: boolean = false) => {
   // Add the api key here. :)
   const API_KEY = "";
   const BASE_URL = "https://api.weatherapi.com/v1";
@@ -15,7 +15,7 @@ export const fetchWeather = async (isHistorical: boolean) => {
     const { latitude, longitude } = coords;
 
     let url;
-    if (isHistorical) {
+    if (fetchForecast) {
       url = `${BASE_URL}/forecast.json?key=${API_KEY}&q=${latitude},${longitude}&days=5`;
     } else {
       url = `${BASE_URL}/current.json?key=${API_KEY}&q=${latitude},${longitude}`;
